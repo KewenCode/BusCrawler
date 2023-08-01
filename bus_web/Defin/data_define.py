@@ -1,6 +1,6 @@
 class parameter:
     od_timestamp_interval = 15  # OperateData_Operate中History车辆记录消除间隔
-    lq_get_num = 5     # request threading 每次运行提取线路数量
+    lq_get_num = 20     # request threading 每次运行提取线路数量
     lq_thread_num = 5   # request threading 并发数
 
 
