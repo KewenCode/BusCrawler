@@ -1,5 +1,0 @@
-[2023-07-29 09:29:49] [WARNING]: 获取sso sign时出现错误: Post "http://localhost:8080/sign": context deadline exceeded (Client.Timeout exceeded while awaiting headers) server: http://localhost:8080/ 
-[2023-07-29 09:29:52] [WARNING]: Protocol -> device lock is disable. http api may fail. 
-[2023-07-29 23:18:32] [WARNING]: 获取sso sign时出现错误: Post "http://localhost:8080/sign": context deadline exceeded (Client.Timeout exceeded while awaiting headers) server: http://localhost:8080/ 
-[2023-07-29 23:18:33] [WARNING]: Protocol -> device lock is disable. http api may fail. 
-[2023-07-29 23:19:06] [WARNING]: Protocol -> device lock is disable. http api may fail. 

@@ -1,3 +1,0 @@
-[2023-07-20 12:33:55] [WARNING]: Protocol -> device lock is disable. http api may fail. 
-[2023-07-20 13:44:43] [ERROR]: Protocol -> unexpected disconnect: read tcp 192.168.1.22:9010->117.62.240.80:8080: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. 
-[2023-07-20 15:14:26] [ERROR]: Protocol -> unexpected disconnect: read tcp 192.168.1.22:13007->49.7.253.45:14000: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. 
