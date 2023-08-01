@@ -1,0 +1,151 @@
+[2023-07-31 09:23:05] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-31 15:19:37] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-31 15:38:43] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10004 
+[2023-07-31 15:38:43] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10004 
+[2023-07-31 15:38:43] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10004 
+[2023-07-31 15:38:43] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10004 
+[2023-07-31 15:38:43] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:44] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:44] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:45] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:45] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:46] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:46] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:47] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:47] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:47] [ERROR]: Protocol -> parse incoming packet error: session expired 
+[2023-07-31 15:38:47] [WARNING]: Bot已离线: session expired 
+[2023-07-31 15:38:48] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:48] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:49] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:49] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:50] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:50] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-07-31 15:38:50] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:51] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:51] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:52] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:52] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:53] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:53] [WARNING]: 尝试重连... 
+[2023-07-31 15:38:54] [WARNING]: 快速重连失败: exchange_emp failed: 16 
+[2023-07-31 15:38:54] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-07-31 15:38:56] [WARNING]: 登录失败: 你当前使用的QQ版本过低，请前往QQ官网im.qq.com下载最新版QQ后重试。 Code: 45 
+[2023-07-31 15:38:56] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 15:38:58] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:58] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:59] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:59] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:38:59] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:00] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:00] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:00] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:00] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:01] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:01] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:01] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:02] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:02] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:02] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:02] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:03] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:03] [ERROR]: Protocol -> parse incoming packet error: invalid packet type 
+[2023-07-31 15:39:03] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:03] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:04] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:04] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:04] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:04] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:05] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:05] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:05] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:05] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:06] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:06] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:06] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:06] [ERROR]: Protocol -> parse incoming packet error: invalid packet type 
+[2023-07-31 15:39:07] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:07] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:07] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:07] [ERROR]: Protocol -> parse incoming packet error: invalid packet type 
+[2023-07-31 15:39:08] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:08] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:08] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:08] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:09] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:09] [ERROR]: Protocol -> parse incoming packet error: invalid packet type 
+[2023-07-31 15:39:09] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:10] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-31 15:39:13] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:13] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:13] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:14] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:14] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:15] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:15] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:16] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:17] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:17] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:17] [WARNING]: 群消息发送失败: 账号可能被风控. 
+[2023-07-31 15:39:18] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:18] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:19] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:19] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:20] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:20] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:21] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:21] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:22] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:22] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:23] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:23] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:24] [WARNING]: 群消息发送失败: 账号可能被风控. 
+[2023-07-31 15:39:29] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:29] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:29] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:30] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:30] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:30] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:30] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:31] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:31] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:31] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:32] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:32] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:32] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:32] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:33] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:33] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:33] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:33] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:34] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:34] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:34] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:35] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:35] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:35] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:36] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:36] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:36] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:36] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:37] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:37] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:37] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:37] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:38] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:38] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:38] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:38] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:39] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:39] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:39] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:39] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:39:40] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-31 15:40:50] [WARNING]: 恢复会话失败: exchange_emp failed: 16 , 尝试使用正常流程登录. 
+[2023-07-31 15:40:57] [WARNING]: 登录失败: 你当前使用的QQ版本过低，请前往QQ官网im.qq.com下载最新版QQ后重试。 Code: 45 
+[2023-07-31 15:40:57] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 15:57:37] [WARNING]: 登录失败: 你当前使用的QQ版本过低，请前往QQ官网im.qq.com下载最新版QQ后重试。 Code: 45 
+[2023-07-31 15:57:38] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 16:58:58] [WARNING]: 获取T544 sign时出现错误: encoding/hex: invalid byte: U+0069 'i' 
+[2023-07-31 16:58:58] [WARNING]: 登录失败: 你当前使用的QQ版本过低，请前往QQ官网im.qq.com下载最新版QQ后重试。 Code: 45 
+[2023-07-31 16:58:58] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 

@@ -1,0 +1,4 @@
+[2023-07-23 09:20:15] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-23 17:51:43] [WARNING]: 获取sso sign时出现错误: Post "http://localhost:8080/sign": context deadline exceeded (Client.Timeout exceeded while awaiting headers) server: http://localhost:8080/ 
+[2023-07-23 17:51:44] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-23 23:05:52] [ERROR]: Protocol -> unexpected disconnect: read tcp 192.168.1.22:8176->42.81.179.165:14000: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. 

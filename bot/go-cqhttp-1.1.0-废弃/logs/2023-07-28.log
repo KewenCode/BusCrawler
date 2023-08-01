@@ -1,0 +1,29 @@
+[2023-07-28 09:30:42] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-28 14:22:33] [WARNING]: Bot已离线: 服务端强制下线. 
+[2023-07-28 14:22:37] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-07-28 14:22:40] [WARNING]: 尝试重连... 
+[2023-07-28 14:22:40] [WARNING]: 快速重连失败: exchange_emp failed: 40 
+[2023-07-28 14:22:40] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-07-28 14:22:42] [WARNING]: 登录失败: 你的帐号涉嫌违规被限制在非常用设备登录，请更换常用设备后重新登录并根据提示进行解封。 Code: 45 
+[2023-07-28 14:22:42] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-28 14:42:58] [ERROR]: Protocol -> unexpected disconnect: EOF 
+[2023-07-28 14:42:58] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-28 14:43:13] [ERROR]: Protocol -> parse incoming packet error: return code unsuccessful: -10003 
+[2023-07-28 14:43:28] [ERROR]: Protocol -> register client failed: Packet timed out 
+[2023-07-28 14:50:45] [WARNING]: 恢复会话失败: exchange_emp failed: 16 , 尝试使用正常流程登录. 
+[2023-07-28 14:50:47] [WARNING]: 登录失败: 你的帐号涉嫌违规被限制在非常用设备登录，请更换常用设备后重新登录并根据提示进行解封。 Code: 45 
+[2023-07-28 14:50:47] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-28 14:51:16] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-07-28 14:51:16] [WARNING]: 将在 5秒 后继续. 
+[2023-07-28 14:51:26] [WARNING]: 当前协议不支持二维码登录, 请配置账号密码登录. 
+[2023-07-28 14:52:05] [WARNING]: 登录失败: 你的帐号涉嫌违规被限制在非常用设备登录，请更换常用设备后重新登录并根据提示进行解封。 Code: 45 
+[2023-07-28 14:52:05] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-28 14:54:27] [WARNING]: 登录失败: 请使用手Q扫描二维码或短信登录。 Code: 238 
+[2023-07-28 14:58:46] [WARNING]: 虚拟设备信息不存在, 将自动生成随机设备. 
+[2023-07-28 14:58:53] [WARNING]: 登录失败: 你的帐号涉嫌违规被限制在非常用设备登录，请更换常用设备后重新登录并根据提示进行解封。 Code: 45 
+[2023-07-28 14:58:53] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-28 15:03:35] [WARNING]: 虚拟设备信息不存在, 将自动生成随机设备. 
+[2023-07-28 15:31:42] [WARNING]: 虚拟设备信息不存在, 将自动生成随机设备. 
+[2023-07-28 15:34:25] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-28 23:00:03] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-28 23:00:13] [WARNING]: 警告: 长消息响应延迟为 7095ms, 大于 1000ms, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 

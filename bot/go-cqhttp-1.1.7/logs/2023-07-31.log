@@ -1,0 +1,40 @@
+[2023-07-31 17:00:04] [WARNING]: 虚拟设备信息不存在, 将自动生成随机设备. 
+[2023-07-31 17:00:23] [WARNING]: 登录失败: 登录失败，请前往QQ官网im.qq.com下载最新版QQ后重试，或通过问题反馈与我们联系。 Code: 45 
+[2023-07-31 17:00:23] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 17:09:34] [WARNING]: 登录失败: 登录失败，请前往QQ官网im.qq.com下载最新版QQ后重试，或通过问题反馈与我们联系。 Code: 45 
+[2023-07-31 17:09:34] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 17:16:02] [WARNING]: 登录失败: 登录失败，请前往QQ官网im.qq.com下载最新版QQ后重试，或通过问题反馈与我们联系。 Code: 45 
+[2023-07-31 17:16:02] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 17:16:30] [WARNING]: 登录失败: 登录失败，请前往QQ官网im.qq.com下载最新版QQ后重试，或通过问题反馈与我们联系。 Code: 45 
+[2023-07-31 17:16:30] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 17:18:33] [FATAL]: open cache image db failed: The process cannot access the file because it is being used by another process. 
+[2023-07-31 17:18:44] [FATAL]: open cache image db failed: The process cannot access the file because it is being used by another process. 
+[2023-07-31 17:18:56] [FATAL]: open cache image db failed: The process cannot access the file because it is being used by another process. 
+[2023-07-31 17:19:07] [FATAL]: open cache image db failed: The process cannot access the file because it is being used by another process. 
+[2023-07-31 17:19:24] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-07-31 17:19:24] [WARNING]: 将在 5秒 后继续. 
+[2023-07-31 17:19:53] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-31 17:19:55] [WARNING]: 检查更新失败！ 
+[2023-07-31 17:23:08] [WARNING]: 当前协议不支持二维码登录, 请配置账号密码登录. 
+[2023-07-31 17:23:39] [WARNING]: 恢复会话失败: exchange_emp failed: 16 , 尝试使用正常流程登录. 
+[2023-07-31 17:23:42] [WARNING]: 登录失败: 你当前使用的QQ版本过低，请前往QQ官网im.qq.com下载最新版QQ后重试。 Code: 45 
+[2023-07-31 17:23:42] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 17:25:19] [WARNING]: 登录失败: 请使用手Q扫描二维码或短信登录。 Code: 238 
+[2023-07-31 17:26:02] [WARNING]: 登录失败: 登录失败，请前往QQ官网im.qq.com下载最新版QQ后重试，或通过问题反馈与我们联系。 Code: 45 
+[2023-07-31 17:26:02] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 17:31:01] [WARNING]: 登录失败: 你当前使用的QQ版本过低，请前往QQ官网im.qq.com下载最新版QQ后重试。 Code: 45 
+[2023-07-31 17:31:01] [WARNING]: 你的账号被限制登录, 请配置 SignServer 后重试 
+[2023-07-31 18:05:27] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-31 18:05:29] [WARNING]: 检查更新失败！ 
+[2023-07-31 18:06:18] [WARNING]: Bot已离线: 服务端强制下线. 
+[2023-07-31 18:06:21] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-07-31 18:06:24] [WARNING]: 尝试重连... 
+[2023-07-31 18:06:25] [WARNING]: 快速重连失败: exchange_emp failed: 16 
+[2023-07-31 18:06:25] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-07-31 18:06:28] [WARNING]: 账号已开启设备锁，请选择验证方式: 
+[2023-07-31 18:06:28] [WARNING]: 1. 向手机 180*******1 发送短信验证码 
+[2023-07-31 18:06:28] [WARNING]: 2. 使用手机QQ扫码验证. 
+[2023-07-31 18:06:28] [WARNING]: 请输入(1 - 2)： 
+[2023-07-31 18:06:44] [WARNING]: 请输入短信验证码： (Enter 提交) 
+[2023-07-31 20:11:00] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-31 20:11:09] [WARNING]: 检查更新失败！ 

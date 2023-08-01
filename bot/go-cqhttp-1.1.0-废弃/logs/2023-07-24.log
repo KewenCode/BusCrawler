@@ -1,0 +1,4 @@
+[2023-07-24 11:51:22] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-07-24 16:29:30] [ERROR]: Protocol -> unexpected disconnect: read tcp 192.168.1.22:9978->183.47.103.84:14000: wsarecv: An established connection was aborted by the software in your host machine. 
+[2023-07-24 20:04:38] [ERROR]: Protocol -> unexpected disconnect: read tcp 192.168.1.22:1562->106.39.206.110:14000: wsarecv: An established connection was aborted by the software in your host machine. 
+[2023-07-24 23:14:15] [ERROR]: Protocol -> unexpected disconnect: read tcp 192.168.1.22:14779->183.47.107.174:8080: wsarecv: An established connection was aborted by the software in your host machine. 

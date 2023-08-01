@@ -1,0 +1,6 @@
+[2023-08-01 11:17:43] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-08-01 11:17:47] [WARNING]: 检查更新失败！ 
+[2023-08-01 15:18:41] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-08-01 15:18:50] [WARNING]: 检查更新失败！ 
+[2023-08-01 15:18:59] [WARNING]: 警告: 长消息响应延迟为 8769ms, 大于 1000ms, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 
+[2023-08-01 16:28:28] [WARNING]: token 已过期, 连续丢失 token 次数为 1 
