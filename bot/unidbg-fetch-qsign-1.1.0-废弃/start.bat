@@ -1,1 +1,0 @@
-bin\unidbg-fetch-qsign.bat --port=8080  --count=1 --library=txlib\8.9.70 --android_id=a6c6e897fa8af61b --host=0.0.0.0
