@@ -8,6 +8,7 @@ from random import choice
 from bus_web.Defin.data_define import parameter
 from bus_web.Defin.sqlite_define import WebDate_operate
 from bus_web.Defin.web_define import Amap_webdata
+from bus_web.Message import line_message
 
 cur_path = os.path.abspath(os.path.dirname(__file__))  # 获取当前文件的目录
 proj_path = cur_path[:cur_path.find('bus_web')]
@@ -294,10 +295,21 @@ class Request_Web:
     bus_data_no = {}
     bus_data_collect = []
     Line_List = []
+    Proxies_List: list = []
     pool_sema = threading.BoundedSemaphore(value=parameter.lq_thread_num)  # 线程并发数
 
     def __init__(self, target_db=None):
         self.target_db = target_db
+
+    @staticmethod
+    def Proxies(file, modify=False):
+        Request = open(proj_path + f'bus_web/DateFile/Proxies/{file}', mode='r')
+        L = Request.readlines()
+        for i in list(L):
+            if i.find("*") > 0:
+                L.remove(i)
+        Request_Web.Proxies_List = L
+        print(Request_Web.Proxies_List)
 
     @staticmethod
     def web_connect(Line_List, lock, Proxies=None):
@@ -324,18 +336,26 @@ class Request_Web:
             lock.acquire()
             Request_Web.Line_List.extend(bus_bad_line)
             bus_bad_line.clear()
+            if len(bus_bad_line) > parameter.lq_get_num * 0.6:
+                try:
+                    # ip失效通知
+                    Request_Web.Proxies_List[Request_Web.Proxies_List.index(Proxies)] = f'*{Proxies}'
+                    append = {'class': 100, 'msg': f'代理IP{Proxies}失效', 'cite': Line_List.web_connect.__name__}
+                    msg = {'type': 'ERROR_LOG', 'code': 'ERROR_PROXIES', 'time': int(time.time() * 1000),
+                           'append': append}
+                    line_message.MSG_IN(msg)
+                finally:
+                    pass
             lock.release()
 
     def thread_connect(self, Line_List: list, Proxies_List: list = None):
-        Request_Web.bus_data_no.clear()     # 清空上次循环
-        Request_Web.bus_data_collect.clear()        # 清空上次循环
+        Request_Web.bus_data_no.clear()  # 清空上次循环
+        Request_Web.bus_data_collect.clear()  # 清空上次循环
         Request_Web.Line_List = Line_List
         separate_len = parameter.lq_get_num  # 每次抽取线路数量
         thread_end = True
         if not Proxies_List:
-            Request = open(proj_path + f'bus_web/DateFile/Proxies/{self.target_db}_Proxies.txt', mode='r')
-            Proxies_List = Request.readlines()
-            print(Proxies_List)
+            Request_Web.Proxies(f'{self.target_db}_Proxies.txt')
 
         lock = threading.Lock()
 
@@ -345,8 +365,8 @@ class Request_Web:
                 Target_List = Request_Web.Line_List[0:separate_len]
                 if len(Target_List) > 0:
                     del Request_Web.Line_List[0:separate_len]
-                    # T = threading.Thread(target=Request_Web.web_connect, args=(Target_List, lock, choice(Proxies_List)))
-                    T = threading.Thread(target=Request_Web().web_connect, args=(Target_List, lock))
+                    T = threading.Thread(target=Request_Web().web_connect,
+                                         args=(Target_List, lock, choice(Request_Web.Proxies_List)))
                     threads.append(T)
                     T.start()
                 time.sleep(1)

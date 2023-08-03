@@ -7,16 +7,6 @@ import requests
 import websockets as ws
 from websockets import ConnectionClosed
 
-global bot
-
-
-def _init():
-    global bot
-
-
-def r_bot():
-    return bot
-
 
 class http:
     def __init__(self, end_str, msg, QQ=None, Group=None):

@@ -59,8 +59,8 @@ class Amap_webdata(WebData):
 
         # *47.97.97.119:3128
         proxies = {
-            'http': 'http://47.100.69.29:8888',
-            'https': 'http://47.100.69.29:8888'
+            'http': f'http://{Proxies}',
+            'https': f'http://{Proxies}'
         }
         try:
             response = requests.get(url=url, params=data, timeout=5, proxies=proxies)
@@ -220,4 +220,10 @@ if __name__ == '__main__':
     # text = Amap_webdata("Y16路", "2", "2",
     #                     "FX+tXJpMOC3fuPROvbS6AVTuTqiVPtZVANxbSFHnOChp1c/tFXjErMhEVhDdfpnQCjYnOzGKImc7TpnTKhkOoJTas455DzQFf1iIl0w+ULN41xRMad8mAoSABhJe6H1Mgxo2ybuNfcEJfsrfaVrDhb7GCVQmsNr30qXYVPHt5OkNYM4SW10ZI+apOmUKBglJ253F9vs74BGtydiWJbiEMSk4EU5BGU94dhSlxeKFCNxsyA0IPeH07LZmkUVh+ht4zgnZw8LqYXHUbDckchfQsmhJF/fJbubr+gSlnjT3+/D/lgGVB/qAkY2r/YsZOVqqBn+89WBouQwI/EUVXjLjlv+Fdqo0CIC3s750KMBUJA2GllCNsCmqtCwL6dWKHGkouVM7bsHbsdr5t1mwxg75ZJJFHCUmKCh0xt8sLiQmcKq2+hMb8dadXNqKyjEDel6VmQd+Zk0T5lyMBoPMcwYOQIKlr1nt08ixU1sllsJ0SZRddYcr6RcoKjQHWi4z2qBzf0MxpZDtyQujZUTAQgFsvvNAyLFOUG8ypO/ElqDE+SI5AFsYv2aAnMJdGBjsNE6M9j41xeieI2UKlKxPmr3NkTNIQnWppKzRsMLYqQ/4k1D2f4kO8cdzgCHxo5kXEpA2Jhmo7aJ61BstpyxcTGkwV52AT1s8RERsxfDOKdZnULI2ghv7HMK/8a8zGsT/SSsYlak5hJ/CD7wtwuw0L0kIbuDp2+zmF1HCbRs99Mkwx0fegJy3duFDrVySFSiXEXhVvd283mEwBhItGjTuEfVaNnbtTSnlkpBLpfxbLD1+Cn7gHzUA8XsPNY8YAiFkRmmm4oD1B21LHu+Z1mj0+jxOX8l7Qcxak/GCYLgn/GGMe2Dtuc6yVZDmOY8HkC/mSgjuR6RhLPtBfClqMR6FazLH5OLoRsCNhCF6F7m95o/5FSJN13vRqPnsKEMqyhOjBr9FxxlV1VvGwlFhxZUAP6e6MkwRBEeSn1RZP5cx65UC85+93biMs8hKlpqG3Lgih+dC8IRN6YtTLKEWazX7llIMK8YpyPJy22J11vqApvAMGC47v8lNIKUpz+m/q8oJsJojiadCcQht2bjvMZLKUP3OBwkM21MvODcJeC0bhowM6fc9yhMnxkiQ+IH6sCzmi261ThiQzZi5i20J4hBPj2FQup8AFGRIjNWalnUhxzOrhsCFY+FwU+jeeT9aNWcx8GhZcVrj/0xC8bZ/pPLKlOafGvL64TCwdMZWsJYlID0x8tmhPn8TtAhXEkYfGkwywQbqymJMNm/7WU+9K8YTZwTM00QE7FL1SMni6qcK0172IuIAoduQYrpMs/uukFKLG9nubP45sIr7sWN7dNWAMsDNm0bXuf/0XsnKnbn9r1j0AbNWcYxaQFDN6c5Ofmj8ea6oGfy6owG4kuS9QM6PEVec/inXDDsj+SddiN4MuwvzRAVef+loEw2VeufD+O/wxfXNg+beb9RcWL/kTSdp3XY99uQhuemlMe7o",
     #                     "4b08ba70-4f36-40cf-a935-c2a45c006854")
-    text.data_receive()
+    text.data_receive('124.222.181.107:7890')
+    # 20.44.206.138:80
+    # 223.215.176.36:8089
+
+    # 114.116.252.222:443
+    # 47.97.97.119:3128
+    # 5.78.72.71:10080

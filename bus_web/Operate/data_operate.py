@@ -380,7 +380,6 @@ class History_operate(Data_operate):
                     line_json['data'][line_json['data']['latest']].append(line_json['timestamp'])  # 上一记录结束
                     line_json['timestamp'] = self.Timestamp  # 重置时间戳
                     line_json['data']['latest'] = self.Line  # 重置最后线路
-                    line_json['data'][self.Line].append(self.Timestamp)  # 添加纪录
 
                     # print(f"{self.Id}行走{self.Line}，上一次行驶时间为{line_json['data'][self.Line][-1]}")
                     belong_list = json.loads(belong_list)
@@ -396,6 +395,8 @@ class History_operate(Data_operate):
                     msg = {'type': 'LINE_LOG', 'code': 'LINE_RUNNING', 'time': self.Timestamp,
                            'append': append}
                     line_message.MSG_IN(msg)
+
+                    line_json['data'][self.Line].append(self.Timestamp)  # 添加纪录
 
                 elif line_json['data']['latest'] == self.Line:
                     line_json['timestamp'] = self.Timestamp  # 重置时间戳

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import requests
 from fake_useragent import UserAgent
 
-from qq_connect.bot_sendmsg import http
+from qq_connect.Bot_sendmsg import http
 
 
 class input_date:
@@ -103,7 +103,7 @@ class input_date:
 
                         # 发送标题
                         receive = http(end_str='/send_msg', Group=826224229, msg=f"{each['DOCTITLE']}\n"
-                                                                               f"{each['DOCPUBURL']}").http_get()
+                                                                                 f"{each['DOCPUBURL']}").http_get()
                         cq_receive.append(receive)
 
                         # 分段发送内容
@@ -139,7 +139,7 @@ class input_date:
 
                     else:
                         receive = http(end_str='/send_msg', Group=826224229, msg=f"{each['DOCTITLE']}\n"
-                                                                               f"{each['DOCPUBURL']}").http_get()
+                                                                                 f"{each['DOCPUBURL']}").http_get()
                         cq_receive.append(receive)
                         receive = http(end_str='/send_msg', Group=826224229, msg=f"{each['DOCCONTENT']}").http_get()
                         cq_receive.append(receive)

@@ -5,8 +5,8 @@ import threading
 import websockets as ws
 from websockets import ConnectionClosed
 
-from qq_connect import bot_sendmsg, Bot_Nakurut
-from qq_connect.bot_sendmsg import websocket
+from qq_connect import Bot_sendmsg, Bot_Nakurut
+from qq_connect.Bot_sendmsg import websocket
 
 count = 0
 

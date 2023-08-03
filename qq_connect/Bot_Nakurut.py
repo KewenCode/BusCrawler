@@ -13,6 +13,9 @@ from nakuru import (
 from nakuru.entities.components import Plain, Image
 from nakuru.network import fetch
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
+
 from bus_web.Request import amap
 
 global gl_msgs
@@ -84,9 +87,13 @@ class Tool:
             title_type = ''
             for obj in list(gl_msgs[C]):
                 if gl_msgs[C][obj][2] not in title_type:
-                    title_type = title_type + str(gl_msgs[C][obj][2])
+                    title_type = title_type + '[' + str(gl_msgs[C][obj][2]) + ']'
                 output = output + '\n' + gl_msgs[C][obj][0]
-            return title[C] + title_type + output
+
+            if len(title_type) > 0:
+                return title[C] + title_type + output
+            else:
+                return None
 
         global gl_msgs
         receive = ''
@@ -94,12 +101,19 @@ class Tool:
         if Class is None:
             Class = [100, 200, 300]
         if type(Class) is int:
-            receive = Single_Class(Class)
+            R = Single_Class(Class)
+            if R is None:
+                R = '暂无数据'
+            receive = R
         elif type(Class) is list:
             send_m = ''
             for num in Class:
-                send_m = send_m + Single_Class(num) + '\n==========\n'
-                receive = send_m
+                R = Single_Class(num)
+                if R is not None:
+                    send_m = send_m + R + '\n==========\n'
+            if send_m == '':
+                send_m = '暂无数据'
+            receive = send_m
 
         return receive
 

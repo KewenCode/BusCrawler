@@ -2,7 +2,7 @@ import json
 import os
 from datetime import datetime, date, timedelta
 
-from qq_connect.bot_sendmsg import http
+from qq_connect.Bot_sendmsg import http
 
 global gl_msgs, gl_send, gl_websocket
 """
@@ -42,13 +42,21 @@ def MSG_IN(data):
         elif log['code'] == 'LINE_RUNNING':
             LINE.LINE_RUNNING(D=log['append'], T=log['time'])
 
+    def ERROR_LOG(log: dict):
+        if log['code'] == 'ERROR_PROXIES':
+            ERROR.ERROR_PROXIES(D=log['append'], T=log['time'])
+
     if type(data) == dict:
         if data['type'] == 'LINE_LOG':
             LINE_LOG(data)
+        if data['type'] == 'ERROR_LOG':
+            ERROR_LOG(data)
     else:
         for info in data:
             if info['type'] == 'LINE_LOG':
                 LINE_LOG(info)
+            if info['type'] == 'ERROR_LOG':
+                ERROR_LOG(info)
 
     # 数据记录
 
@@ -72,12 +80,18 @@ class Tools:
         return wrapper
 
     @staticmethod
-    def Send_Msg(Class=100):
+    def Send_Msg(Class=None):
+        if Class is None:
+            Class = [100, 888]
         cq_receive = []
-        for msgs in gl_send[Class]:
-            receive = http(end_str='/send_msg', Group=826224229, msg=f"{msgs}").http_get()
-            cq_receive.append(receive)
-        gl_send[Class].clear()
+        for C in Class:
+            for msgs in gl_send[C]:
+                if C == 888:
+                    receive = http(end_str='/send_msg', QQ=3353670285, msg=f"{msgs}", ).http_get()
+                else:
+                    receive = http(end_str='/send_msg', Group=826224229, msg=f"{msgs}").http_get()
+                cq_receive.append(receive)
+            gl_send[C].clear()
         print(cq_receive)
 
     @staticmethod
@@ -98,7 +112,11 @@ class Tools:
                 if gl_msgs[C][obj][2] not in title_type:
                     title_type = title_type + '[' + str(gl_msgs[C][obj][2]) + ']'
                 output = '\n' + gl_msgs[C][obj][0]
-            return title[C] + title_type + output
+
+            if len(title_type) > 0:
+                return title[C] + title_type + output
+            else:
+                return None
 
         global gl_msgs
         receive = ''
@@ -107,14 +125,21 @@ class Tools:
             Class = [100, 200, 300]
         if type(Class) is int:
             if ways == 'http':
-                receive = http(end_str='/send_msg', Group=826224229, msg=f"{Single_Class(Class)}").http_get()
+                R = Single_Class(Class)
+                if R is None:
+                    R = '暂无数据'
+                receive = http(end_str='/send_msg', Group=826224229, msg=f"{R}").http_get()
             elif ways == 'socket':
                 receive = Single_Class(Class)
         elif type(Class) is list:
             send_m = ''
             for num in Class:
-                send_m = send_m + Single_Class(num) + '\n==========\n'
+                R = Single_Class(num)
+                if R is not None:
+                    send_m = send_m + R + '\n==========\n'
             if ways == 'http':
+                if send_m == '':
+                    send_m = '暂无数据'
                 receive = http(end_str='/send_msg', Group=826224229, msg=f"{send_m}").http_get()
             elif ways == 'socket':
                 receive = send_m
@@ -216,5 +241,22 @@ class LINE:
         else:
             Log_Msg = f"🅡[{D['id']}] {T} »»{D['support']}·Last:{T_str}"
             gl_send[D['class']].append(Log_Msg)
+
+        return Type, IDs, Log_Msg
+
+
+class ERROR:
+    @staticmethod
+    @Tools.Write_Msg()
+    def ERROR_PROXIES(D: dict, T: str):
+        """
+        :param D: {class:100, msg:xx, cite:xx}
+        :param T:
+        :return:
+        """
+        Type = '🅔'
+        IDs = Tools.Msg_ID('ERROR_PROXIES', f'{D["cite"]}')
+        Log_Msg = f"🅔[ProxiesIP] {D['msg']}"
+        gl_send[888].append(f"{D['msg']}")
 
         return Type, IDs, Log_Msg
