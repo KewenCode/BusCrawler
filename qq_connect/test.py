@@ -1,12 +1,4 @@
-import asyncio
-import json
-import threading
-
-import websockets as ws
-from websockets import ConnectionClosed
-
-from qq_connect import Bot_sendmsg, Bot_Nakurut
-from qq_connect.Bot_sendmsg import websocket
+from qq_connect.Nakurut import Bot_Nakurut
 
 count = 0
 

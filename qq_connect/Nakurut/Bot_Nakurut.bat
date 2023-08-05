@@ -1,0 +1,1 @@
+python Bot_Nakurut.py

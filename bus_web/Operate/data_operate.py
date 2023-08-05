@@ -215,7 +215,6 @@ class BusIdData_Operate(Data_operate):
             :param da_list: 数据列表
             :return: history_update_collect, support_collect
             """
-            global receive
             union_dict = {}
             update_list = []
             IDInfo_record = []
@@ -264,6 +263,7 @@ class BusIdData_Operate(Data_operate):
                 # 存在即继续遍历
                 for lines in list(union_dict):
                     for directions in list(union_dict[lines]):
+                        receive = []
                         sql = f' WHERE "Line" = "{lines}" AND "Direction" = "{directions}"'
                         print(sql)
                         try:

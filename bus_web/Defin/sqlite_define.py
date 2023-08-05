@@ -1,7 +1,10 @@
 import calendar
+import os
 import sqlite3
 from datetime import datetime
 
+cur_path = os.path.abspath(os.path.dirname(__file__))   # 获取当前文件的目录
+proj_path = cur_path[:cur_path.find('bus_web')]
 
 def dict_factory(cursor, row):
     # 将游标获取的数据处理成字典返回
@@ -40,7 +43,7 @@ class WebDate_operate(Sqlite_operate):
         if data is None:
             data = []
         self.table = table  # 目标表单
-        self.target_db = "DateFile/Database/WebDate.db"  # 目标数据库，默认为WebDate.db
+        self.target_db = proj_path + "bus_web/DateFile/Database/WebDate.db"  # 目标数据库，默认为WebDate.db
         self.date_list = data  # 数据文件
 
     def fetchall(self, sql="") -> list:
@@ -98,7 +101,7 @@ class IDInfo_operate(Sqlite_operate):
         if data is None:
             data = []
         self.table = "IDInfo"  # 目标表单
-        self.target_db = "DateFile/Database/BusIdData.db"  # 目标数据库，默认为BusIdData.db
+        self.target_db = proj_path + "bus_web/DateFile/Database/BusIdData.db"  # 目标数据库，默认为BusIdData.db
         self.date_list = data  # 数据文件
 
     def batch_insert(self) -> int:
@@ -197,7 +200,7 @@ class IDHistory_operate(Sqlite_operate):
         if data is None:
             data = []
         self.table = "IDHistory"  # 目标表单
-        self.target_db = "DateFile/Database/BusIdData.db"  # 目标数据库，默认为BusIdData.db
+        self.target_db = proj_path + "bus_web/DateFile/Database/BusIdData.db"  # 目标数据库，默认为BusIdData.db
         self.date = data  # 数据文件
 
     def batch_insert(self) -> int:
@@ -281,7 +284,7 @@ class IDSupport_operate(Sqlite_operate):
         if data is None:
             data = []
         self.table = "IDSupport"  # 目标表单
-        self.target_db = "DateFile/Database/BusIdData.db"  # 目标数据库，默认为BusIdData.db
+        self.target_db = proj_path + "bus_web/DateFile/Database/BusIdData.db"  # 目标数据库，默认为BusIdData.db
         self.date = data  # 数据文件
 
     def batch_insert(self) -> int:
@@ -370,7 +373,7 @@ class OperateDate_operate(Sqlite_operate):
                 month = month - 1
 
         self.table = str(datetime.strftime(datetime.now(), "%Y-%m"))  # 目标表单
-        self.target_db = "DateFile/Database/OperateDate.db"  # 目标数据库，默认为BusIdData.db
+        self.target_db = proj_path + "bus_web/DateFile/Database/OperateDate.db"  # 目标数据库，默认为BusIdData.db
         self.date = data  # 数据文件
 
     def batch_insert(self) -> int:

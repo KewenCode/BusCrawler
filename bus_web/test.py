@@ -59,14 +59,14 @@ from datetime import date, datetime, timedelta
 # print((datetime.now()).strftime('%Y%m%d'))
 
 # b = []
-a = [11, 2, 2, 3, 4, 5]
+# a = [11, 2, 2, 3, 4, 5]
 # for L in list(a):
 #     print(L)
 #     if L not in b:
 #         b.append(L)
 #     else:
 #         a.remove(L)
-print(random.choice(a))
+# print(random.choice(a))
 # print(a[1:3])
 # del a[1:3]
 # print(a)
@@ -77,11 +77,41 @@ print(random.choice(a))
 # a.update(b)
 # print(a)
 
+# print('12|'.split('|'))
+# a = '12|'.split('|')
+# b,c,d = a
+# print(eval("datetime.fromtimestamp(1690379045999/1000).strftime('%Y-%m-%d %H:%M')"))
+
 # for i in range(10):
 #     print(i)
 
+def fun_yield():
+    print("starting fun yield")
+    while True:
+        res = yield 4
+        if res == 2:
+            return 'jie'
+
+        print("判断yield之后是否继续执行", res)
+
+
+g = fun_yield()  # 调用这个函数只是会得到一个生成器
+print("函数结果是一个生成器：", g)
+
+print("对此生成器还是进行调用：")
+print("第一次调用")
+print(next(g))
+print("生成器的返回值", g.send(1))
+print("第二次调用")
+try:
+    print("生成器的返回值", g.send(2))
+except StopIteration as R:
+    print(R)
+print("第三次调用")
+print("生成器的返回值", g.send(3))
 
 # a = {123: {'L': 2, 'D': 1}}
+# print(len(a[123]))
 # if 123 in list(a) and a[123]['L'] == 1 and a[123]['D'] == 2:
 #     print(1)
 # else:

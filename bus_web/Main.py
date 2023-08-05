@@ -1,13 +1,10 @@
-import multiprocessing
 import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 
-from bus_web.Message import line_message
 from bus_web.Request.amap import amap_loop, amap_reset
-from qq_connect import Bot_Nakurut
 
 # line_message._init()
 # amap_loop()

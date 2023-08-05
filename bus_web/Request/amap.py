@@ -54,7 +54,7 @@ def amap_loop(event=None):
         stop_mark_json = json.loads(stop_mark_file.read())
         stop_mark_file.close()
 
-    if not event:
+    if event:
         event.set()  # reset开始标记
         event.clear()
         event.wait()  # 等待reset结束
@@ -63,7 +63,7 @@ def amap_loop(event=None):
 
 
 def amap_reset(event=None):
-    if not event:
+    if event:
         event.wait()  # 等待loop结束
 
     file = open(proj_path + 'bus_web/DateFile/Temp/Temp_Mark.txt', mode='r+')
@@ -75,7 +75,7 @@ def amap_reset(event=None):
     file.close()
     print('mark success reset')
 
-    if not event:
+    if event:
         event.set()  # loop开始标记
 
 
