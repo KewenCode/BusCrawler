@@ -1,2 +1,8 @@
+.idea/
 bot/
-bus_web/DateFile
+bus_change/Channel/DOT_Info.bat
+bus_web/DateFile/Log
+bus_web/bus_web.bat
+bus_web/test.py
+qq_connect/test.py
+qq_connect/Nakurut/Bot_Nakurut.bat

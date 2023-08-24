@@ -8,7 +8,7 @@ proj_path = cur_path[:cur_path.find('bus_web')]
 
 from bus_web.Message import line_message
 from bus_web.Operate.data_operate import BusIdData_Operate, OperateData_Operate
-from bus_web.Operate.request_operate import Request_Filter
+from bus_web.Operate.request_operate import Filter_Request_Output
 from bus_web.Operate.support_operate import Support_Operate
 
 line_message._init()
@@ -16,8 +16,8 @@ line_message._init()
 
 def amap_main():
     """web数据库连接"""
-    gps_day = copy.deepcopy(Request_Filter("amap").web_day_normal())
-    gps_night = copy.deepcopy(Request_Filter("amap").web_night_normal())
+    gps_day = copy.deepcopy(Filter_Request_Output("amap").Filter_Normal_Day())
+    gps_night = copy.deepcopy(Filter_Request_Output("amap").Filter_Normal_Night())
     bus_data_collect = gps_day + gps_night
     """数据初筛，返回最新值"""
     data_list1 = BusIdData_Operate(bus_data_collect).main_operate()

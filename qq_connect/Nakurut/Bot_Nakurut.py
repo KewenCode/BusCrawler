@@ -2,6 +2,7 @@ import json
 import os
 import sys
 
+import requests
 from nakuru import (
     CQHTTP,
     GroupMessage,
@@ -22,8 +23,24 @@ from qq_connect.Nakurut.Bot_QA import QA
 global gl_msgs
 QA_Obj = {}
 
+
+def hostcheck():
+    host = ['localhost', '192.168.1.215']
+    for each in host:
+        try:
+            response = requests.get(url=f'http://{each}:15202/get_login_info', timeout=1)  # 设置timeout，使响应等待1s
+        except:
+            continue
+        if response.status_code == 200:
+            json_re = json.loads(response.text)
+            if json_re['retcode'] == 0:
+                print(f'已登录QQ:{json_re["data"]["user_id"]}，用户名：{json_re["data"]["nickname"]}')
+                return each
+    exit('未登录go-cqhttp，无法发送消息!')
+
+
 app = CQHTTP(
-    host="localhost",
+    host=hostcheck(),
     port=15203,
     http_port=15202,
     token=None  # 可选，如果配置了 Access-Token
@@ -64,6 +81,19 @@ async def _(app: CQHTTP, source: GroupMessage):
              '3': '日期索引'},
             {'A': 'LAST_RUN_TIME'}
         ).yield_Object()
+        await app.sendGroupMessage(source.group_id,
+                                   f'[CQ:at,qq={source.sender.user_id}]\n' + next(QA_Obj[source.sender.user_id]))
+    if source.raw_message.find('车辆信息查询') == 0:
+        data = source.raw_message.split(' ')
+        del data[0]
+        # 创建生成器
+        QA_Obj[source.sender.user_id] = QA(
+            {'0': {'1': 'A', '2': {'21': 'B', '22': 'C'}, '3': 'D'}},
+            {'0': '请输入车号*', '1': '记录状态',
+             '2': '运营状态', '21': '运营历史', '22': '配属历史',
+             '3': '支援情况'},
+            {'A': 'BUS_STATE', 'B': 'BUS_OPERATE_HIS', 'C': 'BUS_BELONG_HIS', 'D': 'BUS_SUPPORT_HIS'}
+        ).yield_Object(arg_list=data if len(data) > 0 else None)
         await app.sendGroupMessage(source.group_id,
                                    f'[CQ:at,qq={source.sender.user_id}]\n' + next(QA_Obj[source.sender.user_id]))
     # 通过消息链处理

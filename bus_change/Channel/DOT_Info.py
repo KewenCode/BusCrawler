@@ -1,10 +1,15 @@
 import json
+import os
 import sqlite3
+import sys
 import time
 from datetime import datetime, timedelta
 
 import requests
 from fake_useragent import UserAgent
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(BASE_DIR)
 
 from qq_connect.Bot_sendmsg import http
 

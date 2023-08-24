@@ -1,14 +1,19 @@
 import ast
 import hashlib
 import json
+import os
 import time
 from datetime import datetime, date, timedelta
+from random import choice
 
 from bus_web.Defin.data_define import parameter
 from bus_web.Defin.sqlite_define import IDInfo_operate, IDHistory_operate, OperateDate_operate, WebDate_operate
 from bus_web.Defin.web_define import Chelaile_webdata
 from bus_web.Message import line_message
 from bus_web.Message.message_manage import container
+
+cur_path = os.path.abspath(os.path.dirname(__file__))  # 获取当前文件的目录
+proj_path = cur_path[:cur_path.find('bus_web')]
 
 
 class Data_operate:
@@ -218,6 +223,16 @@ class BusIdData_Operate(Data_operate):
             union_dict = {}
             update_list = []
             IDInfo_record = []
+            Proxies_List: list = []
+
+            def Proxies(file, modify=False):
+                Request = open(proj_path + f'bus_web/DateFile/Proxies/{file}', mode='r')
+                IP = Request.readlines()
+                for i in list(IP):
+                    if i.find("*") > 0:
+                        IP.remove(i)
+                print(IP)
+                return IP
 
             def dict_insert(Line, Direction, Id, Line_s: list):
                 """
@@ -249,6 +264,9 @@ class BusIdData_Operate(Data_operate):
             if datetime.now().timestamp() * 1000 > TR_json['Expire']:
                 TR_json = {}
 
+            # Proxies
+            Proxies_List = Proxies(f'cll_Proxies.txt')
+
             for L in da_list:
                 if L['info'][2] in list(TR_json) \
                         and TR_json[L['info'][2]]['RLine'] == L['info'][0] \
@@ -270,13 +288,12 @@ class BusIdData_Operate(Data_operate):
                             cll_query = WebDate_operate('chelaile').fetchall(sql)[0]
                             receive, code = Chelaile_webdata(lines, cll_query['Direction'],
                                                              cll_query['QueryID'],
-                                                             cll_query['stationId']).data_receive()
+                                                             cll_query['stationId']).data_receive(choice(Proxies_List))
                             time.sleep(3)
                         except:
                             code = 404
 
                         if code > 201:
-                            print(f'车来了数据异常，本次循环取消记录，+1')
                             # 停止循环
                             if f"{lines}/{directions}" in list(code_break):
                                 if code_break[f"{lines}/{directions}"] > 3:
@@ -286,6 +303,8 @@ class BusIdData_Operate(Data_operate):
                                     time.sleep(5)  # 规避检测
                             else:
                                 code_break[f"{lines}/{directions}"] = 1
+                            print(f'车来了数据异常，本次记录失败，'
+                                  f'{lines}/{directions}已查询次数{code_break[f"{lines}/{directions}"]}')
                             break
 
                         for each in receive:

@@ -1,1 +1,1 @@
-{"Expire": 1691228791398, "625735": {"RLine": "566\u8def", "BLine": "567\u8def", "Direction": 1}}
+{"Expire": 1692842295755}

@@ -154,6 +154,7 @@ class IDInfo_operate(Sqlite_operate):
 
     def retrieve(self, target_row) -> list:
         db = sqlite3.connect(self.target_db)
+        db.row_factory = dict_factory
         current = db.cursor()
         # print("数据库开启")
         data = []
