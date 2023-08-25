@@ -1,7 +1,9 @@
 .idea/
 bot/
 bus_change/Channel/DOT_Info.bat
-bus_web/DateFile/Log
+bus_change/DateFile/*
+bus_web/DateFile/Database/*
+bus_web/DateFile/Log/*
 bus_web/bus_web.bat
 bus_web/test.py
 qq_connect/test.py
