@@ -11,7 +11,10 @@ from fake_useragent import UserAgent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(BASE_DIR)
 
-from qq_connect.Bot_sendmsg import http
+from bus_change.Http_SendMsg import http
+
+cur_path = os.path.abspath(os.path.dirname(__file__))  # 获取当前文件的目录
+proj_path = cur_path[:cur_path.find('bus_change')]
 
 
 class input_date:
@@ -175,7 +178,7 @@ class Web_date_operate:
         """
         if data is None:
             data = []
-        self.target_db = "D:/公共交通/wiki/BusCrawler/bus_change/DateFile/ChangeInformation.db"  # 目标数据库
+        self.target_db = proj_path + "bus_change/DateFile/ChangeInformation.db"  # 目标数据库
         self.table = table  # 目标表单
         self.date_list = data  # 数据文件
 
